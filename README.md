@@ -1,16 +1,16 @@
 Android Maven Blank
 =============
 
-A blank android project that has maven support with some frecuent dependencies used in android:
+A blank android project that has maven support with some frecuently used dependencies in android:
 
-* [actionbarsherlock](http://actionbarsherlock.com/)
+* [ActionBarSherlock](http://actionbarsherlock.com/)
 * [Google maps Android API v2](https://developers.google.com/maps/documentation/android/)
-* [Google analytics](https://developers.google.com/analytics/devguides/collection/android/)
+* [Google Analytics](https://developers.google.com/analytics/devguides/collection/android/)
 * [RoboGuice (Dependency Injection)](https://github.com/roboguice/roboguice)
 * [RoboElectric (Testing)](http://pivotal.github.io/robolectric/)
 * [Facebok SDK](https://developers.facebook.com/android/)
 
-prerequisites
+Prerequisites
 -------------
 
 ### Option 1: Use my repository
@@ -29,4 +29,21 @@ Delete unused dependencies
 --------------------------
 
 If you are not going to use all the dependencies listed above, delete them from the pom.xml
-This file was modified by Android Studio (I/O Preview) AI-130.729444 for binding GitHub repository
+
+Generate APK with maven
+--------------------------
+
+If you want to generate the apk you just have to execute:
+
+    mvn clean package
+
+If you want to generate the final apk to be uploaded to the Play Store you will have to configure the following properties in pom.xml
+
+    <keystore.location>keystore_MODIFYME</keystore.location>
+    <keystore.storepass>storepass_MODIFYME</keystore.storepass>
+    <keystore.keypass>keypass_MODIFYME</keystore.keypass>
+    <keystore.alias>alias_MODIFYME</keystore.alias>
+
+and execute:
+
+    mvn clean package -Psign
