@@ -15,9 +15,11 @@ Prerequisites
 
 ### Option 1: Use my repository
 
-By default, the pom.xml has a repository configured, that is pointing to a public dropbox directory where I have uploaded all the dependencies needed in this pom.xml
+By default, the pom.xml file has a repository configured, that is pointing to a public dropbox directory where I have uploaded all the dependencies needed.
 
 You don´t need to do anything to use this option. Just understand that maybe some day this directory won´t exist.
+
+If you import this project in Android Studio it should work without doing anything.
 
 ### Option 2: Generate all the dependencies
 
